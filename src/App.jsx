@@ -1,9 +1,10 @@
-import './App.styles.scss'
+import React from 'react';
+import './App.styles.scss';
 
 function App() {
-  return(
+  return (
     <h1>Hola, mundo</h1>
-  )
+  );
 }
 
 export default App;
