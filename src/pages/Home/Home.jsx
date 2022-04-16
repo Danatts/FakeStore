@@ -1,5 +1,5 @@
 import Menu from '../../components/Menu/Menu';
-import ProductCard from '../../components/ProductCard/ProductCard';
+import ProductList from '../../components/ProductList/ProductList';
 import Footer from '../../components/Footer/Footer';
 import './Home.styles.scss';
 
@@ -8,7 +8,7 @@ function Home() {
     <>
       <Menu />
       <div className="home__list">
-        <ProductCard />
+        <ProductList />
       </div>
       <Footer />
     </>

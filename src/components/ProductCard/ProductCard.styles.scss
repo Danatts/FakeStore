@@ -5,20 +5,20 @@ $lightblue: #467097;
 $whiteblue: #e4ebef;
 
 .productcard {
-  align-items: center;
   background-color: $whiteblue;
   border-color: $darkblue;
   border-radius: 1rem;
   border-style: solid;
-  border-width: 0.4rem;
+  border-width: 0.2rem;
   display: flex;
-  height: 35rem;
+  height: 30rem;
   width: 30rem;
 
   &__content {
     display: flex;
     flex-direction: column;
-    height: 95%;
+    justify-content: space-between;
+    height: 98%;
     width: 100%;
   }
 
@@ -29,17 +29,17 @@ $whiteblue: #e4ebef;
     height: auto;
     justify-content: center;
     margin: 1rem auto;
-    padding: 0.5rem 0rem;
+    padding: 0.5rem;
     width: 100%;
   }
 
   &__title {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: $cream;
   }
 
   &__figure {
-    height: 20rem;
+    height: 15rem;
     margin: 1rem auto;
     width: 90%;
   }
