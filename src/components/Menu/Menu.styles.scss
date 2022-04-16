@@ -18,6 +18,12 @@ $whiteblue: #e4ebef;
     font-size: 3rem;
   }
 
+  &__underline {
+    background-color: $gray;
+    height: 0.4rem;
+    width: 100%;
+  }
+
   a {
     text-decoration: none;
   }

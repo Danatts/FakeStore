@@ -6,10 +6,13 @@ import {
 
 function Menu() {
   return (
-    <div className="menu">
-      <NavLink to={ROUTE_HOME} className="menu__navlink">HOME</NavLink>
-      <NavLink to={ROUTE_ABOUT} className="menu__navlink">ABOUT</NavLink>
-    </div>
+    <>
+      <div className="menu">
+        <NavLink to={ROUTE_HOME} className="menu__navlink">HOME</NavLink>
+        <NavLink to={ROUTE_ABOUT} className="menu__navlink">ABOUT</NavLink>
+      </div>
+      <div className="menu__underline" />
+    </>
   );
 }
 
