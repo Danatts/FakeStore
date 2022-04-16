@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './ProductCard.styles.scss';
 
 function ProductCard({ product }) {
-  const { title, image } = product;
+  const { id, title, image } = product;
   return (
     <div className="productcard">
       <div className="productcard__content">
@@ -14,7 +15,9 @@ function ProductCard({ product }) {
         </div>
         <div className="productcard__body">
           <span>Contador</span>
-          <button type="button">Detalles</button>
+          <Link to={`/product/${id}`}>
+            <button className="productcard__button" type="button">Detalles</button>
+          </Link>
         </div>
       </div>
     </div>
@@ -23,12 +26,14 @@ function ProductCard({ product }) {
 
 ProductCard.propTypes = {
   product: PropTypes.instanceOf(Object),
+  id: PropTypes.number,
   title: PropTypes.string,
   image: PropTypes.string,
 };
 
 ProductCard.defaultProps = {
   product: {},
+  id: null,
   title: 'Title',
   image: 'Image not found',
 };

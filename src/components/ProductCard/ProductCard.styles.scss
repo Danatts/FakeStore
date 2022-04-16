@@ -34,8 +34,9 @@ $whiteblue: #e4ebef;
   }
 
   &__title {
-    font-size: 1.5rem;
     color: $cream;
+    font-size: 1.5rem;
+    text-align: center;
   }
 
   &__figure {
@@ -55,4 +56,15 @@ $whiteblue: #e4ebef;
     justify-content: space-around;
   }
 
+  &__button {
+    background-color: $lightblue;
+    border-radius: 0.7rem;
+    color: $cream;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+
+    &:hover {
+      scale: 1.05;
+    }
+  }
 }
