@@ -1,9 +1,8 @@
-import React from 'react';
-import './App.styles.scss';
+import Home from './pages/Home/Home';
 
 function App() {
   return (
-    <h1>Hola, mundo</h1>
+    <Home />
   );
 }
 
