@@ -1,8 +1,8 @@
-import Home from './pages/Home/Home';
+import MainRouter from './routes/MainRouter';
 
 function App() {
   return (
-    <Home />
+    <MainRouter />
   );
 }
 
