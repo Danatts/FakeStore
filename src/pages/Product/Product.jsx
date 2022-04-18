@@ -8,7 +8,6 @@ import { getSingleProduct } from '../../services/products';
 function Product() {
   const [product, setProduct] = useState({});
   const { id } = useParams();
-  console.log(product);
 
   useEffect(() => {
     const fetchSingleProduct = async () => {

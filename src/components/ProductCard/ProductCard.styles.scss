@@ -56,15 +56,29 @@ $whiteblue: #e4ebef;
     justify-content: space-around;
   }
 
+  &__timer {
+    color: $lightblue;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
   &__button {
     background-color: $lightblue;
+    border-color: $darkblue;
     border-radius: 0.7rem;
     color: $cream;
     font-weight: 600;
     padding: 0.7rem 1rem;
 
-    &:hover {
-      scale: 1.05;
+    &--disabled {
+      background-color: $lightblue;
+      border-color: $darkblue;
+      border-radius: 0.7rem;
+      color: $cream;
+      cursor: default;
+      filter: brightness(60%);
+      font-weight: 600;
+      padding: 0.7rem 1rem;
     }
   }
 }

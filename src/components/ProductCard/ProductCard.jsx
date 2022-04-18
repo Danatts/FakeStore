@@ -1,8 +1,27 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { numberToTime } from './ProductCard.service';
 import './ProductCard.styles.scss';
 
 function ProductCard({ product }) {
+  let [number, setNumber] = useState(3);
+  const [disabled, setDisabled] = useState(false);
+
+  useEffect(() => {
+    if (number >= 0) {
+      const timer = setInterval(() => {
+        number -= 1;
+        setNumber(number);
+      }, 1000);
+      return () => clearInterval(timer);
+    }
+  }, [number]);
+
+  useEffect(() => {
+    if (number < 0) setDisabled(!disabled);
+  }, [number]);
+
   const { id, title, image } = product;
   return (
     <div className="productcard">
@@ -14,9 +33,17 @@ function ProductCard({ product }) {
           <img className="productcard__image" src={image} alt="producto" />
         </div>
         <div className="productcard__body">
-          <span>Contador</span>
+          <span className="productcard__timer">
+            {number >= 0 ? numberToTime(number) : 'Expired'}
+          </span>
           <Link to={`/product/${id}`}>
-            <button className="productcard__button" type="button">Detalles</button>
+            <button
+              disabled={disabled}
+              className={disabled ? 'productcard__button--disabled' : 'productcard__button'}
+              type="button"
+            >
+              Detalles
+            </button>
           </Link>
         </div>
       </div>
