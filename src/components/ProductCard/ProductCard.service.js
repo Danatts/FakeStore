@@ -6,3 +6,5 @@ export const numberToTime = (num) => {
   }
   return `0${min}:${sec}`;
 };
+
+export const getRandomNum = (min, max) => Math.floor(Math.random() * (max - min) + min);

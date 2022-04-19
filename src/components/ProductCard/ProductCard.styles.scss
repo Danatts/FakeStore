@@ -10,6 +10,7 @@ $whiteblue: #e4ebef;
   border-radius: 1rem;
   border-style: solid;
   border-width: 0.2rem;
+  box-shadow: 0.5rem 0.5rem 0.7rem $darkblue;
   display: flex;
   height: 30rem;
   width: 30rem;
@@ -58,7 +59,7 @@ $whiteblue: #e4ebef;
 
   &__timer {
     color: $lightblue;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 500;
   }
 

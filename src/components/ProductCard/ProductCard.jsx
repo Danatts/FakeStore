@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { numberToTime } from './ProductCard.service';
+import { numberToTime, getRandomNum } from './ProductCard.service';
 import './ProductCard.styles.scss';
 
 function ProductCard({ product }) {
-  let [number, setNumber] = useState(3);
+  const ranNum = getRandomNum(60, 300);
+  let [number, setNumber] = useState(ranNum);
   const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
