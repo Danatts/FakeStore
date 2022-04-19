@@ -13,6 +13,14 @@ function ProductList() {
     fetchAllProducts();
   }, []);
 
+  if (products.length === 0) {
+    return (
+      <div>
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
+
   return (
     <>
       <h2 className="productlist__title">PRODUCTS</h2>

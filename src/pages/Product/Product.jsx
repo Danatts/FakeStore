@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Menu from '../../components/Menu/Menu';
-import Footer from '../../components/Footer/Footer';
-import ProductDetail from '../../components/ProductDetail/ProductDetail';
+import DetailCard from '../../components/DetailCard/DetailCard';
 import { getSingleProduct } from '../../services/products';
+import './Product.styles.scss';
 
 function Product() {
   const [product, setProduct] = useState({});
@@ -20,8 +20,7 @@ function Product() {
   return (
     <>
       <Menu />
-      <ProductDetail product={product} />
-      <Footer />
+      <DetailCard product={product} />
     </>
   );
 }
